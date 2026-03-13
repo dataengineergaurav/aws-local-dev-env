@@ -67,21 +67,6 @@ Environment configuration file for AWS credentials and LocalStack auth.
 
 ---
 
-### commands.md
-Reference guide for common Docker and Airflow commands.
-
-**Benefits:**
-- Quick reference for daily operations
-- Includes Airflow user creation command
-- Simple, copy-paste ready snippets
-
-**Limitations:**
-- Not comprehensive (missing many Airflow commands)
-- No explanation of what each command does
-- Could become outdated with newer versions
-
----
-
 ### prometheus/prometheus.yml
 Prometheus configuration for metrics scraping.
 
