@@ -128,20 +128,6 @@ Spark configuration for S3A access to LocalStack S3.
 
 ---
 
-### localstack (binary)
-LocalStack CLI wrapper script.
-
-**Benefits:**
-- Provides LocalStack-specific commands
-- May include custom initialization logic
-
-**Limitations:**
-- Binary file (cannot inspect source)
-- May be redundant (LocalStack runs in Docker)
-- Unclear purpose without documentation
-
----
-
 ## Quick Start
 
 ```bash
