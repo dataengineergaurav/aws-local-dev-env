@@ -117,7 +117,20 @@ Spark configuration for S3A access to LocalStack S3.
 
 ```bash
 # Start all services
+mkdir -p airflow_dags airflow_logs
+sudo chown -R 50000:0 airflow_logs airflow_dags
+sudo chmod -R 775 airflow_logs airflow_dags
+
 docker compose up -d
+
+# Create Airflow admin user (one-time)
+docker exec -it airflow-webserver airflow users create \
+  --username admin \
+  --firstname Admin \
+  --lastname User \
+  --role Admin \
+  --email admin@example.com \
+  --password admin
 
 # Check service health
 docker compose ps
@@ -128,14 +141,7 @@ docker compose logs -f
 # Stop all services
 docker compose down
 
-# Create Airflow admin user (one-time)
-docker exec -it airflow-webserver airflow users create \
-  --username admin \
-  --firstname Admin \
-  --lastname User \
-  --role Admin \
-  --email admin@example.com \
-  --password admin
+
 ```
 
 ## Accessing Services
